@@ -11,9 +11,7 @@ function MainMenu() {
 
   const map = useMap({
     mapContainer,
-    center: position
-      ? { lat: position.coords.latitude, lng: position.coords.longitude }
-      : { lat: 0, lng: 0 },
+    center: { lat: 0, lng: 0 },
   });
 
   useEffect(() => {
@@ -33,7 +31,11 @@ function MainMenu() {
           <img src="https://identicons.github.com/tombertoli.png" />
         </div>
         <div className="create-party">
-          <img src={logo} />
+          <div className="clip">
+            <div className="button">
+              <span>+</span>
+            </div>
+          </div>
         </div>
       </header>
     </div>
